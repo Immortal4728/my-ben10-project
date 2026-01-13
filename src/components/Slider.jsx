@@ -4,10 +4,12 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Slider = () => {
+  const base = import.meta.env.BASE_URL;
+
   const aliens = [
     {
       name: "Swampfire",
-      img: "/images/slider4.png",
+      img: `${base}images/slider4.png`,
       description:
         "A methane-based alien with plant powers and the ability to ignite flames." +
         "Swampfire is covered with a tough, bark-like skin that makes him resistant to physical damage." +
@@ -18,7 +20,7 @@ const Slider = () => {
     },
     {
       name: "Humungousaur",
-      img: "/images/slider6.png",
+      img: `${base}images/slider6.png`,
       description:
         "A giant dinosaur-like alien with immense strength and durability." +
         "Standing over 12 feet tall, Humungousaur’s sheer size makes him a powerhouse in any fight." +
@@ -29,7 +31,7 @@ const Slider = () => {
     },
     {
       name: "Big Chill",
-      img: "/images/slider1.png",
+      img: `${base}images/slider1.png`,
       description:
         "A moth-like alien with the power of intangibility and ice breath." +
         "Big Chill can phase through solid objects, making him nearly impossible to trap or contain." +
@@ -40,7 +42,7 @@ const Slider = () => {
     },
     {
       name: "Echo Echo",
-      img: "/images/slider2.png",
+      img: `${base}images/slider2.png`,
       description:
         "A small silicon-based alien capable of creating sonic clones." +
         "Echo Echo’s primary ability is to duplicate himself, overwhelming opponents with sheer numbers." +
@@ -51,7 +53,7 @@ const Slider = () => {
     },
     {
       name: "Chromastone",
-      img: "/images/slider5.png",
+      img: `${base}images/slider5.png`,
       description:
         "A crystalline alien with the ability to absorb and channel energy." +
         "Chromastone’s body is composed of nearly indestructible crystal, making him resistant to physical and energy-based attacks.\n\n" +
@@ -62,7 +64,7 @@ const Slider = () => {
     },
     {
       name: "Rath",
-      img: "/images/slider3.png",
+      img: `${base}images/slider3.png`,
       description:
         "A tiger-like alien with unmatched strength and ferocity." +
         "Rath is covered in orange fur with black stripes, sharp claws, and a muscular build that makes him a fearsome close-combat fighter." +
@@ -87,10 +89,7 @@ const Slider = () => {
   };
 
   return (
-    <div
-      className="slider"
-      style={{ background: aliens[index].background }}
-    >
+    <div className="slider" style={{ background: aliens[index].background }}>
       <button className="arrow left-arrow" onClick={handlePrev}>
         <FaChevronLeft size={28} />
       </button>
@@ -98,6 +97,7 @@ const Slider = () => {
       <div className="slider-images">
         {aliens.map((alien, i) => {
           const offset = (i - index + aliens.length) % aliens.length;
+
           let x = 0,
             y = 0,
             scale = 1,
@@ -164,8 +164,8 @@ const Slider = () => {
             custom={direction}
             initial={{ y: direction === "next" ? -80 : 80, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-       exit = {{y:direction === "next" ? 80 : -80 , opacity:0}}
-       transition={{duration:0.6, ease : "easeInOut"}}
+            exit={{ y: direction === "next" ? 80 : -80, opacity: 0 }}
+            transition={{ duration: 0.6, ease: "easeInOut" }}
           >
             <h1>{aliens[index].name}</h1>
             {aliens[index].description.split("\n\n").map((para, i) => (

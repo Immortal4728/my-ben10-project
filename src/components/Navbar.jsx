@@ -2,10 +2,12 @@ import React from "react";
 import "./Navbar.css";
 
 const Navbar = () => {
+  const base = import.meta.env.BASE_URL;
+
   return (
     <div className="navbar">
       <div className="logo">
-        <img src="/images/logo.png" alt="Ben 10 Logo" />
+        <img src={`${base}images/logo.png`} alt="Ben 10 Logo" />
       </div>
 
       <ul className="nav-links">
