@@ -1,12 +1,32 @@
-# React + Vite
+# 🛸 Ben 10 Alien Showcase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, animated **Ben 10–themed website** built using **React + Vite**, showcasing iconic aliens with smooth sliders, transitions, and responsive UI.  
+The project is fully deployed on **GitHub Pages** and focuses on frontend performance, animations, and clean component structure.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
+👉 https://immortal4728.github.io/my-ben10-project/
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+- ⚡ Built with **Vite + React** for fast performance
+- 🎨 Animated hero section with draggable alien carousel
+- 🧬 Interactive alien slider with smooth transitions
+- 🧭 Responsive navigation bar with routing
+- 🎞️ Animations powered by **Framer Motion**
+- 🌐 Deployed on **GitHub Pages** with proper asset handling
+
+---
+
+## 🛠️ Tech Stack
+- **Frontend:** React, Vite
+- **Styling:** CSS
+- **Animations:** Framer Motion
+- **Icons:** React Icons
+- **Deployment:** GitHub Pages
+
+---
+
+## 📂 Project Structure
